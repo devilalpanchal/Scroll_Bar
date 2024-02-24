@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate OTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #para {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="para"></p>
+        <button onclick="generateOTP()">Generate OTP</button>
+    </div>
+    <script>
+        function generateOTP() {
+            let para = document.getElementById("para");
+            let digits = [0,1,2,3,4,5,6,7,8,9];
+            let OTP = [];
+            for (let i = 0; i < 8; i++) {
+                OTP[i] = digits[Math.floor(Math.random() * 10)];
+            }
+            let string = OTP.join('');
+            para.textContent = string;
+            return OTP;
+        }
+
+        console.log("OTP of 4 digits: ");
+        let a = generateOTP();
+        console.log(a);
+    </script>
+</body>
+</html>
