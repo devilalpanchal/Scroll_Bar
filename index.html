@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll bar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="gallery-wrap">
+        <img src="images/back.png" id="backbtn">
+        <div id="gallery">
+            <div>
+                <span><img src="./images/Deer Pic.jpg"></span>
+                <span><img src="./images/development.jpg"></span>
+                <span><img src="./images/HIll.jpg"></span>
+
+            </div>
+            <div>
+
+                <span><img src="./images/flower.jpg"></span>
+                <span><img src="./images/BreakFast.jpg"></span>
+                <span><img src="./images/White Flower.jpg"></span>
+
+            </div>
+        </div>
+        <img src="images/next.png" id="nextbtn">
+    </div>
+
+    <script>
+
+        let scrolDivision = document.querySelector('#gallery');
+        let back = document.querySelector('#backbtn');
+        let next = document.querySelector('#nextbtn');
+
+
+        scrolDivision.addEventListener('wheel', (e) => {
+            e.preventDefault()
+            scrolDivision.scrollLeft += e.deltaY;
+        })
+
+        next.addEventListener('click', () => {
+            scrolDivision.style.scrollBehavior = "smooth"
+            scrolDivision.scrollLeft += 900
+        })
+        back.addEventListener('click', () => {
+            scrolDivision.style.scrollBehavior = "smooth"
+            scrolDivision.scrollLeft -= 900
+        })
+
+    
+
+        // direction of understand code
+
+        // e.deltaY event object property hai, jo mouse wheel ki movement ko represent karta hai. Positive value indicate karta hai ki wheel ne neeche ki taraf ghumna hai aur negative value indicate karta hai ki wheel ne oopar ki taraf ghumna hai
+
+        //     scrollLeft ek property hai jo define karta hai ki kitna horizontal scroll kiya gaya hai. Is line mein += operator ka istemal kiya gaya hai, jo current scroll position ko mouse wheel ke direction ke hisab se update karta hai.
+        //
+
+        // style.scrollBehavior property ko "smooth" value assign karne se, browser smooth scrolling behaviour ko enable karta hai.
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
