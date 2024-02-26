@@ -20,9 +20,9 @@
   <script>
     touristSpots = [
       {
-        first_name: 'The Tajmahal',
         last_name: 'Victoria Memorial',
-        full_name: 'The Birupaksha Temple'
+        first_name: 'The Virupaksha Temple ',
+        full_name: ' Tajmahal'
       }
     ];
 
@@ -51,28 +51,29 @@
     });
 
     RefreshBtn.addEventListener('click', () => {
-      var sortedArray = function (a, b) {
+      function sortedArray(a, b) {
         var aTitle = a.full_name.toLowerCase(),
             bTitle = b.full_name.toLowerCase();
 
         aTitle = removeArticles(aTitle);
         bTitle = removeArticles(bTitle);
 
-        if (aTitle > bTitle) return 1;
-        if (aTitle < bTitle) return -1;
+        if (aTitle > bTitle) return -1;
+        if (aTitle < bTitle) return 1;
         return 0;
-      };
+      }
 
+      
       function removeArticles(str) {
-        words = str.split(" ");
+        const articles = ['a', 'an', 'the'];
+        const words = str.split(" ");
         if (words.length <= 1) return str;
-        if (words[0] == 'a' || words[0] == 'the' || words[0] == 'an')
-          return words.splice(1).join(" ");
+        if (articles.includes(words[0].toLowerCase()))
+          return words.slice(1).join(" ");
         return str;
       }
 
       var sortedArray = touristSpots.sort(sortedArray);
-      // console.log(sortedArray)
       getContainer(sortedArray, tbody);
     });
   </script>
