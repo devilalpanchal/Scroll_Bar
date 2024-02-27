@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+
+    <select class="search">
+        <option value="1" selected="">method1</option>
+        <option value="2">method2</option>
+    </select>
+
+    <script>
+        var select = document.createElement("select");
+
+select.id = "Calculate";
+var option1 = document.createElement("option");
+option1.value="1";
+option1.innerHTML= "1";
+
+var option2 = document.createElement("option");
+option2.value="2";
+option2.innerHTML= "2";
+
+var option3 = document.createElement("option");
+option3.value="3";
+option3.innerHTML= "3";
+
+select.addChild(option1);
+select.addChild(option2);
+select.addChild(option3);
+
+    </script>
+</body>
+</html>

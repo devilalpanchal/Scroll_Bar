@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throtling</title>
+</head>
+
+<body>
+
+
+    <input type="text" id="search" placeholder="search"> <br>
+    <button>click me</button>
+
+    <script>
+        search.addEventListener('input', () => {
+            setTimeout(() => {
+                console.log(search.value)
+            }, 1000)
+        })
+
+        let hasStarted = false
+        function throtling(callback, delay) {
+            if (hasStarted) {
+                return
+            } else {
+                hasStarted = true
+                setTimeout(() => {
+                    callback()
+                }, delay)
+                hasStarted = false
+            }
+        }
+    </script>
+</body>
+
+</html>
