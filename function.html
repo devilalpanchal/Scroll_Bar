@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+<!-------------------- to add functionality ----------------->
+    <script>
+    let a =10  // global
+function x() { // glabal
+    console.log('hello function') // local
+    
+}
+
+let b = 20 // global
+console.log(b) // glabal
+
+// stack // primitive go //500mb staorage less then heap// string, number // when stora data in get value
+// heap // non- primitive go //1000mb  storage greater then stack // object , array ,function// object in heap get refrensh address / number
+// to indicate stack//
+
+let arr = [2,3,4]
+let arr2 = [2,3,4]
+console.log(arr == arr2) // false
+console.log(
+arr[0]===arr2[0]
+
+ ) //true
+let arr3 = arr2
+console.log(arr3==arr2)//true
+
+let q = 10
+let k = q
+console.log(q==k)//true
+
+    </script>
+    
+
+</body>
+</html>
