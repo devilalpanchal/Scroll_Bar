@@ -1,47 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
 
 
 
 
-<!-------------------- to add functionality ----------------->
+    <!-------------------- to add functionality ----------------->
     <script>
-    let a =10  // global
-function x() { // glabal
-    console.log('hello function') // local
+    //     let a = 10  // global
+    //     function x() { // glabal
+    //         console.log('hello function') // local
+
+    //     }
+
+    //     let b = 20 // global
+    //     console.log(b) // glabal
+
+    //     // stack (last in first out)// primitive go //500mb staorage less then heap// string, number // when stora data in get value
+    //     // heap() // non- primitive go //1000mb  storage greater then stack // object , array ,function// object in heap get refrensh address / number
+    //     // to indicate stack//
+
+    //     let arr = [2, 3, 4]
+    //     let arr2 = [2, 3, 4]
+    //     console.log(arr == arr2) // false
+    //     console.log(
+    //         arr[0] === arr2[0]
+
+    //     ) //true
+    //     let arr3 = arr2
+    //     console.log(arr3 == arr2)//true
+
+    //     let q = 10
+    //     let k = q
+    //     console.log(q == k)//true
+
+
+    //     ///////// HOISTING
+
+    //     // let 
+    //     // var 
+    //     // const
+    //     // function
+    //     // tdz full form tempral dead zone
+
+    //     var n = 10
+    //     // var n got to stack creation
+    //     // n= 10  Execution
+    //     // console.log(r)//20
+
+    //     console.log(s) //undefined
+    //     let r = 20
+    //     var s = 20
+    //     let t = 30
+
+    //     function x() {
+    //         console.log(40)
+
+    //     }
+    //     console.log(r)
+    //     console.log(t)
+
+    //     // Fully hoisting function is fully hosist and partial hoisting\ and partial is with let var and const
+    //     // console.log(x) //before declaring value we can access
+
+    //     // function x() {
+    //     //     console.log('r')
+    //     // }
+    //     // console.log(x)
+
+
+    //     // function expretion not fully hoisting
+    //     // console.log(x) 
+
+    //     // let x = function () {
+    //     //     console.log('r')
+    //     // }
+    //     // console.log(x)
+    //       let ok= 10
+    //     function sum(ok, pk) {
+    //         let pk = 20
+    //         console.log(ok + pk)
+    //     }
+    //     sum(10, 20)
+    //     console.log(o)
+    //     let p = 10
+    //     console.log(p)
+    //     // call stack is software
+
+    //     let f = 10
+    //     function x(g) {
+    //         let h = 20
+    //         let g = 30
+    //         return g
+
+    //     }
+    //     x(10)
+    //    let d = x(10)
+
+    //     console.log(g) //undfined is datatype OR not defined is not data type
+    //     console.log(f)
+// how to excute function
+
+        // Creation variable 
+        // declare
+        // all variable go to stack  value is undefined r,s,t..
+        // which variable is go to tdz can't console before   r went and t went
+        // compelete
+
+        // Execution
+        // s is undefined
+        // TDZ create with let and const usase pahle nahi tha/.....................................................................................................................
+
+        // why var is not go in TDZ
+
+// let h = 45\
+
+
+
+// IIFE?
+// function name() {
+//     console.log('devi')
+    
+// }
+// devi()
+
+
+///////////////// Anonymous function///////////
+
+// (function () {
+//     console.log('devi')
+    
+// })
+// ();
+
+// (function () {
+    
+//     let a= 10
+//     let b =20
+//     console.log(a+b)
+// })()
+
+// keep in mind this thing we con't use this.method in arrow function
+
+
+// today we will discuss about closer
+let j = 100
+let one = function () {
+    console.log(j) // global environment in lexical 
     
 }
 
-let b = 20 // global
-console.log(b) // glabal
-
-// stack // primitive go //500mb staorage less then heap// string, number // when stora data in get value
-// heap // non- primitive go //1000mb  storage greater then stack // object , array ,function// object in heap get refrensh address / number
-// to indicate stack//
-
-let arr = [2,3,4]
-let arr2 = [2,3,4]
-console.log(arr == arr2) // false
-console.log(
-arr[0]===arr2[0]
-
- ) //true
-let arr3 = arr2
-console.log(arr3==arr2)//true
-
-let q = 10
-let k = q
-console.log(q==k)//true
-
-    </script>
+let two = function () {
+    let qr = 200 // local environment
+    console.log(qr)
+    one()
     
+}
+two()
+
+
+let a = 500
+function varme() {
+    function helo() { // helo lexical environment is varme annd it is take a = 100 Value
+        console.log(a);
+    }
+    helo()
+}
+varme()
+    </script>
+
 
 </body>
+
 </html>
