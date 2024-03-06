@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // inhertand is work bottom to top
+        // PROtotype is use
+        let animal = {
+            eat: true,
+        }
+
+
+        let monkey = {
+            eat: true,
+            __proto__: animal
+        }
+
+        // console.log(monkey.eat);
+
+        let grandParent = {
+            house: 'devilal bhavan',
+            land: '100acre',
+        }
+        let parent = {
+            car: 'BMW',
+            __proto__: grandParent,
+        }
+
+        let devilal = {
+            gameSet: 'ps5',
+            __proto__: grandParent,
+        }
+        // console.log(devilal.house);
+        // console.log(parent);
+        // console.log(parent.land);
+        // console.log(grandParent.car);
+
+
+        // let functionObj = {
+
+
+        // }
+        let num = {
+            a: 25,
+            b: 50,
+            getSum: function () {
+                return this.a + this.b
+            }
+        }
+        let result = num.getSum()
+        // console.log(result);
+
+
+
+        // call Aplly Bind method
+
+        // firstly call method
+
+        let functionObj = {
+            getDetail: function (learning, pet, book) {
+                return `i am  learnig ${learning} and i love my ${pet} and also reading ${book}`
+            }
+        }
+        let obj = {
+            section: 'bia',
+            center: 'DDUGKY',
+            role: 'developer',
+            getSection: function () {
+                console.log(this.section);
+            },
+
+            getCenter: function () {
+                console.log(`i am livind in the center of ${this.center}`);
+            }
+        }
+        let obj2 = {
+            name: 'devi',
+            // name: 'abc',
+            email: 'devi@gmail.com',
+            batch: 'bia4',
+            center: 'DDUGKY'
+
+        }
+
+
+        // let x = functionObj.getDetail.call(obj)
+        // console.log(obj2.section.call(obj));
+        // console.log();
+        // let x = functionObj.getDetail.call(obj2,'javaScript','Lion','Bhagvast Geeta')
+        // console.log(x);
+
+
+        // APPly Method
+        // Obj para meter in Array
+        // let x = functionObj.getDetail.apply(obj2,[ 'javaScript','Lion','Bhagvast Geeta' ])
+        // console.log(x);
+
+
+        // Bind method
+
+        // let x = obj.getCenter.bind(obj2)
+        // x()
+        // console.log(x);
+
+        const module = {
+            x: 42,
+            getX: function () {
+                return this.x
+            }
+        }
+
+        let x = module.getX
+        let y = x.bind(module)
+        console.log(y());
+
+        // remeber constructor funtion
+
+        // function Animal(name,Leg,eat){
+        //     this.name=name;
+        //     this.leg =Leg,
+        //     this.eat = eat,
+
+        // }
+        // let monkey = new Animal('Devi',4.'Gram')
+        // console.log(monkey);
+        // class Animal {
+        //     constructor(name, leg, eat) {
+        //         this.name = name;
+        //         this.leg = Leg,
+        //         this.eat = eat,
+        //     }
+        // }
+
+        // let monkey = new Animal('sart','4',Gram')
+
+    </script>
+</body>
+
+</html>

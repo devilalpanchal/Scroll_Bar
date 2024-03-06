@@ -15,99 +15,99 @@
 
     <!-------------------- to add functionality ----------------->
     <script>
-    //     let a = 10  // global
-    //     function x() { // glabal
-    //         console.log('hello function') // local
+        //     let a = 10  // global
+        //     function x() { // glabal
+        //         console.log('hello function') // local
 
-    //     }
+        //     }
 
-    //     let b = 20 // global
-    //     console.log(b) // glabal
+        //     let b = 20 // global
+        //     console.log(b) // glabal
 
-    //     // stack (last in first out)// primitive go //500mb staorage less then heap// string, number // when stora data in get value
-    //     // heap() // non- primitive go //1000mb  storage greater then stack // object , array ,function// object in heap get refrensh address / number
-    //     // to indicate stack//
+        //     // stack (last in first out)// primitive go //500mb staorage less then heap// string, number // when stora data in get value
+        //     // heap() // non- primitive go //1000mb  storage greater then stack // object , array ,function// object in heap get refrensh address / number
+        //     // to indicate stack//
 
-    //     let arr = [2, 3, 4]
-    //     let arr2 = [2, 3, 4]
-    //     console.log(arr == arr2) // false
-    //     console.log(
-    //         arr[0] === arr2[0]
+        //     let arr = [2, 3, 4]
+        //     let arr2 = [2, 3, 4]
+        //     console.log(arr == arr2) // false
+        //     console.log(
+        //         arr[0] === arr2[0]
 
-    //     ) //true
-    //     let arr3 = arr2
-    //     console.log(arr3 == arr2)//true
+        //     ) //true
+        //     let arr3 = arr2
+        //     console.log(arr3 == arr2)//true
 
-    //     let q = 10
-    //     let k = q
-    //     console.log(q == k)//true
-
-
-    //     ///////// HOISTING
-
-    //     // let 
-    //     // var 
-    //     // const
-    //     // function
-    //     // tdz full form tempral dead zone
-
-    //     var n = 10
-    //     // var n got to stack creation
-    //     // n= 10  Execution
-    //     // console.log(r)//20
-
-    //     console.log(s) //undefined
-    //     let r = 20
-    //     var s = 20
-    //     let t = 30
-
-    //     function x() {
-    //         console.log(40)
-
-    //     }
-    //     console.log(r)
-    //     console.log(t)
-
-    //     // Fully hoisting function is fully hosist and partial hoisting\ and partial is with let var and const
-    //     // console.log(x) //before declaring value we can access
-
-    //     // function x() {
-    //     //     console.log('r')
-    //     // }
-    //     // console.log(x)
+        //     let q = 10
+        //     let k = q
+        //     console.log(q == k)//true
 
 
-    //     // function expretion not fully hoisting
-    //     // console.log(x) 
+        //     ///////// HOISTING
 
-    //     // let x = function () {
-    //     //     console.log('r')
-    //     // }
-    //     // console.log(x)
-    //       let ok= 10
-    //     function sum(ok, pk) {
-    //         let pk = 20
-    //         console.log(ok + pk)
-    //     }
-    //     sum(10, 20)
-    //     console.log(o)
-    //     let p = 10
-    //     console.log(p)
-    //     // call stack is software
+        //     // let 
+        //     // var 
+        //     // const
+        //     // function
+        //     // tdz full form tempral dead zone
 
-    //     let f = 10
-    //     function x(g) {
-    //         let h = 20
-    //         let g = 30
-    //         return g
+        //     var n = 10
+        //     // var n got to stack creation
+        //     // n= 10  Execution
+        //     // console.log(r)//20
 
-    //     }
-    //     x(10)
-    //    let d = x(10)
+        //     console.log(s) //undefined
+        //     let r = 20
+        //     var s = 20
+        //     let t = 30
 
-    //     console.log(g) //undfined is datatype OR not defined is not data type
-    //     console.log(f)
-// how to excute function
+        //     function x() {
+        //         console.log(40)
+
+        //     }
+        //     console.log(r)
+        //     console.log(t)
+
+        //     // Fully hoisting function is fully hosist and partial hoisting\ and partial is with let var and const
+        //     // console.log(x) //before declaring value we can access
+
+        //     // function x() {
+        //     //     console.log('r')
+        //     // }
+        //     // console.log(x)
+
+
+        //     // function expretion not fully hoisting
+        //     // console.log(x) 
+
+        //     // let x = function () {
+        //     //     console.log('r')
+        //     // }
+        //     // console.log(x)
+        //       let ok= 10
+        //     function sum(ok, pk) {
+        //         let pk = 20
+        //         console.log(ok + pk)
+        //     }
+        //     sum(10, 20)
+        //     console.log(o)
+        //     let p = 10
+        //     console.log(p)
+        //     // call stack is software
+
+        //     let f = 10
+        //     function x(g) {
+        //         let h = 20
+        //         let g = 30
+        //         return g
+
+        //     }
+        //     x(10)
+        //    let d = x(10)
+
+        //     console.log(g) //undfined is datatype OR not defined is not data type
+        //     console.log(f)
+        // how to excute function
 
         // Creation variable 
         // declare
@@ -121,60 +121,241 @@
 
         // why var is not go in TDZ
 
-// let h = 45\
+        // let h = 45\
 
 
 
-// IIFE?
-// function name() {
-//     console.log('devi')
-    
-// }
-// devi()
+        // IIFE?
+        // function name() {
+        //     console.log('devi')
+
+        // }
+        // devi()
 
 
-///////////////// Anonymous function///////////
+        ///////////////// Anonymous function///////////
 
-// (function () {
-//     console.log('devi')
-    
-// })
-// ();
+        // (function () {
+        //     console.log('devi')
 
-// (function () {
-    
-//     let a= 10
-//     let b =20
-//     console.log(a+b)
-// })()
+        // })
+        // ();
 
-// keep in mind this thing we con't use this.method in arrow function
+        // (function () {
 
+        //     let a= 10
+        //     let b =20
+        //     console.log(a+b)
+        // })()
 
-// today we will discuss about closer
-let j = 100
-let one = function () {
-    console.log(j) // global environment in lexical 
-    
-}
-
-let two = function () {
-    let qr = 200 // local environment
-    console.log(qr)
-    one()
-    
-}
-two()
+        // keep in mind this thing we con't use this.method in arrow function
 
 
-let a = 500
-function varme() {
-    function helo() { // helo lexical environment is varme annd it is take a = 100 Value
-        console.log(a);
-    }
-    helo()
-}
-varme()
+        // // today we will discuss about closer
+        // let j = 100
+        // let one = function () {
+        //     console.log(j) // global environment in lexical 
+
+        // }
+
+        // let two = function () {
+        //     let qr = 200 // local environment
+        //     console.log(qr)
+        //     one()
+
+        // }
+        // two()
+
+
+        // let a = 500
+        // function varme() {
+        //     function helo() { // helo lexical environment is varme annd it is take a = 100 Value
+        //         console.log(a);
+        //     }
+        //     helo()
+        // }
+        // varme()
+
+
+
+        // function devi() {
+        //     let B = 300
+        //     let f = function () {
+        //         console.log(B);
+
+        //     }
+
+        //     return f
+
+        // }
+        // let R = 800
+        // let X = devi()
+        // console.log(X);
+        // X()
+
+        // in devi() function
+        // close exeception is function is will be delete so after it is save the value of variable of like in our above code B varible
+        // *******************************READ MDND DOCCUMENTAIION OF CLOSER*****************************************************************
+
+
+        // ARROW FUNCTION
+
+        // function expression is we will convert in arrow function
+        // let sum = function (a,b) {
+        //     return a+b
+
+        // }
+        // let result = sum(20,20)
+        // console.log(result);
+
+        // // arrow fu?n
+        // let asum=(n,m) => 5+4  
+        // let x = asum(n,m)
+        // console.log(x);
+
+
+
+        // let eligible = function (age) {
+
+        //     if (age<=18) {
+        //         return false;
+
+        //     }else{
+        //         return true;
+        //     }
+        // }
+        // console.log(eligible(25));
+
+
+        // let eligible1 = age=>age<=15?false:true
+
+        // console.log(eligible1(25));
+
+
+        // console.log(this);
+        // console.log(window);
+        // console.log(window.LocalStorage.ipAddress);
+        // console.log(print);
+        // console.log(href);
+
+
+        // function name (fName,lName) {
+        //     let obj ={
+        //         fName:this.fName,
+        //     lName:this.lName,
+        //     }
+        //     return obj
+
+        // }
+
+        // let x = name('devi','lal')
+        // console.log(x);
+
+        // let ob = {
+        //     f:'devi',
+        //     l:'pan',
+        //     name:function (){
+        //         console.log(`my name is ${this.f} ${this.l}`);
+        //     }
+        // }
+        // ob.name()
+
+        //******************* OOps Concept *******************
+        // create class
+        class Professor {
+            constructor(name, teach) {
+                this.name = name
+                this.teach = teach
+            }
+            introduce() {
+                console.log(`Hi i am ${this.name}`);
+            }
+        }
+
+        let devi = new Professor('devi sir', 'oops')
+        console.log(devi.name);
+        console.log(devi.introduce());
+        console.log(devi.teach);
+
+        let Yogesh = new Professor('Yogi sir', 'pytohn')
+        console.log(Yogesh.introduce());
+        console.log(Yogesh.teach);
+
+        // when we want someting inherit use (extend )
+        class Student extends Professor {
+            constructor(name, section) {
+                super(name) //which we want to access
+                this.name = name
+                this.section = section
+            }
+            introduce() {
+
+            }
+
+            play(game) {
+                return ` i love to play ${game}`
+                super.introduce()
+            }
+        }
+
+        let sachin = new Student('sachin', 'BIA-03', 'chess')
+        console.log(sachin.name);
+        // console.log(sachin.play(chess));
+        sachin.introduce()
+
+        // HOW to USE THE Static Keyword provide we can acess without create new extenss
+
+        class MathFunc {
+            static add(a, b) {
+                console.log(a + b);
+            }
+            static Subtract(a, b) {
+                console.log(a - b);
+            }
+
+        }
+
+        // let math1 = new MathFunc();
+        // math1.add(50,45)
+        MathFunc.add(20, 30)
+        MathFunc.Subtract(20, 30)
+        // class Value extends MathFunc {
+        //     constructor(a, b) {
+        //         super()
+        //         this.a = a
+        //         this.b = b
+        //     }
+        // }
+
+        // let y = new Value()
+        // y.add(50,40)
+
+        // let math = new MathFunc()
+        // math.add(10, 20)
+
+        // ENCAPSULATION?
+        // OOPS = Object Oriented programimng languae
+        // array 
+        // object 
+        // string 
+        let arr1 = [64,5]
+        console.log(arr1);
+        let arr2 = new Array(10,20,30)
+        console.log(arr2);
+
+        let obj1 = {}
+        console.log(obj);
+
+        let obj2 = new Object()
+        console.log(obj2);
+
+
+        // Fout Pillar of the oops
+        // 1 abstraction
+        // 2 encapsulation // =>  
+        // 3 inheritance \\ =>  we can make reusable  code and clean code --- acessing the properties and methods super class for the subclasses
+        // 4 polymorfhism
+
     </script>
 
 
