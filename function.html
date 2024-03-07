@@ -262,63 +262,63 @@
 
         //******************* OOps Concept *******************
         // create class
-        class Professor {
-            constructor(name, teach) {
-                this.name = name
-                this.teach = teach
-            }
-            introduce() {
-                console.log(`Hi i am ${this.name}`);
-            }
-        }
+        // class Professor {
+        //     constructor(name, teach) {
+        //         this.name = name
+        //         this.teach = teach
+        //     }
+        //     introduce() {
+        //         console.log(`Hi i am ${this.name}`);
+        //     }
+        // }
 
-        let devi = new Professor('devi sir', 'oops')
-        console.log(devi.name);
-        console.log(devi.introduce());
-        console.log(devi.teach);
+        // let devi = new Professor('devi sir', 'oops')
+        // console.log(devi.name);
+        // console.log(devi.introduce());
+        // console.log(devi.teach);
 
-        let Yogesh = new Professor('Yogi sir', 'pytohn')
-        console.log(Yogesh.introduce());
-        console.log(Yogesh.teach);
+        // let Yogesh = new Professor('Yogi sir', 'pytohn')
+        // console.log(Yogesh.introduce());
+        // console.log(Yogesh.teach);
 
-        // when we want someting inherit use (extend )
-        class Student extends Professor {
-            constructor(name, section) {
-                super(name) //which we want to access
-                this.name = name
-                this.section = section
-            }
-            introduce() {
+        // // when we want someting inherit use (extend )
+        // class Student extends Professor {
+        //     constructor(name, section) {
+        //         super(name) //which we want to access
+        //         this.name = name
+        //         this.section = section
+        //     }
+        //     introduce() {
 
-            }
+        //     }
 
-            play(game) {
-                return ` i love to play ${game}`
-                super.introduce()
-            }
-        }
+        //     play(game) {
+        //         return ` i love to play ${game}`
+        //         super.introduce()
+        //     }
+        // }
 
-        let sachin = new Student('sachin', 'BIA-03', 'chess')
-        console.log(sachin.name);
-        // console.log(sachin.play(chess));
-        sachin.introduce()
+        // let sachin = new Student('sachin', 'BIA-03', 'chess')
+        // console.log(sachin.name);
+        // // console.log(sachin.play(chess));
+        // sachin.introduce()
 
-        // HOW to USE THE Static Keyword provide we can acess without create new extenss
+        // // HOW to USE THE Static Keyword provide we can acess without create new extenss
 
-        class MathFunc {
-            static add(a, b) {
-                console.log(a + b);
-            }
-            static Subtract(a, b) {
-                console.log(a - b);
-            }
+        // class MathFunc {
+        //     static add(a, b) {
+        //         console.log(a + b);
+        //     }
+        //     static Subtract(a, b) {
+        //         console.log(a - b);
+        //     }
 
-        }
+        // }
 
-        // let math1 = new MathFunc();
-        // math1.add(50,45)
-        MathFunc.add(20, 30)
-        MathFunc.Subtract(20, 30)
+        // // let math1 = new MathFunc();
+        // // math1.add(50,45)
+        // MathFunc.add(20, 30)
+        // MathFunc.Subtract(20, 30)
         // class Value extends MathFunc {
         //     constructor(a, b) {
         //         super()
@@ -338,16 +338,16 @@
         // array 
         // object 
         // string 
-        let arr1 = [64,5]
-        console.log(arr1);
-        let arr2 = new Array(10,20,30)
-        console.log(arr2);
+        // let arr1 = [64,5]
+        // console.log(arr1);
+        // let arr2 = new Array(10,20,30)
+        // console.log(arr2);
 
-        let obj1 = {}
-        console.log(obj);
+        // let obj1 = {}
+        // console.log(obj);
 
-        let obj2 = new Object()
-        console.log(obj2);
+        // let obj2 = new Object()
+        // console.log(obj2);
 
 
         // Fout Pillar of the oops
@@ -356,6 +356,87 @@
         // 3 inheritance \\ =>  we can make reusable  code and clean code --- acessing the properties and methods super class for the subclasses
         // 4 polymorfhism
 
+        // Encapsulation
+        // Encapsulation in JavaScript is a concept that involves bundling data (attributes) and the methods (functions) that operate on that data into a single unit, known as an object. 
+
+        // class BankAccount{
+        //     constructor(name,acc,balance){
+        //         this.name = name
+        //         this.acc = acc
+        //         this.balance = balance
+        //     }
+        // }
+
+        // showDetails(){
+        //     return `Account holder - ${name}
+        //     Account Number - ${acc}
+        //     and total balance is ${balance}`
+        // }
+
+        // deposit(amount){
+        //     this.balance+=amount
+        // }
+
+        // withdrow(amount){
+        //     this.balance-=amount
+        // }
+
+        // let sachinBankDetails = new BankAccount('sachin',564656546556,6566)
+        // console.log(sachinBankDetails.balance);
+        // sachinBankDetails.deposit(1000)
+        // console.log(sachinBankDetails.balance);
+
+        // polymorfhism
+        // the same function with different singnature is called many times
+
+        class FirstClass{
+            add(){
+                console.log('devilalpanchal')
+
+            }
+        }
+        class SecondClass extends FirstClass{
+            add(){
+                console.log(20+20);
+
+            }
+        }
+        class ThirdClass extends SecondClass{
+            add(){
+                console.log('hero panti');
+
+            }
+        }
+
+        let obj0 = new FirstClass
+        let obj5 = new SecondClass
+        let obj7 = new ThirdClass
+        obj0.add()
+        obj5.add()
+        obj7.add()
+
+        // Abstraction
+        // abstraction is hiding something if you want to hide
+
+        class Account1 {
+            #balance
+            constructor(owner,balance){
+                this.owner = owner
+                this.#balance = balance
+            }
+        }
+
+        get balance(){
+            return this.#balance
+        }
+        balance(newBalance){
+            if (newBalance<0) {
+                
+            } else {
+                
+            }
+            
+        }
     </script>
 
 
