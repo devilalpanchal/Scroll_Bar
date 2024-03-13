@@ -389,57 +389,246 @@
         // polymorfhism
         // the same function with different singnature is called many times
 
-        class FirstClass{
-            add(){
-                console.log('devilalpanchal')
+        // class FirstClass{
+        //     add(){
+        //         console.log('devilalpanchal')
 
-            }
-        }
-        class SecondClass extends FirstClass{
-            add(){
-                console.log(20+20);
+        //     }
+        // }
+        // class SecondClass extends FirstClass{
+        //     add(){
+        //         console.log(20+20);
 
-            }
-        }
-        class ThirdClass extends SecondClass{
-            add(){
-                console.log('hero panti');
+        //     }
+        // }
+        // class ThirdClass extends SecondClass{
+        //     add(){
+        //         console.log('hero panti');
 
-            }
-        }
+        //     }
+        // }
 
-        let obj0 = new FirstClass
-        let obj5 = new SecondClass
-        let obj7 = new ThirdClass
-        obj0.add()
-        obj5.add()
-        obj7.add()
+        // let obj0 = new FirstClass
+        // let obj5 = new SecondClass
+        // let obj7 = new ThirdClass
+        // obj0.add()
+        // obj5.add()
+        // obj7.add()
 
         // Abstraction
         // abstraction is hiding something if you want to hide
 
-        class Account1 {
-            #balance
-            constructor(owner,balance){
-                this.owner = owner
-                this.#balance = balance
-            }
-        }
+        // class Account1 {
+        //     #balance
+        //     constructor(owner,balance){
+        //         this.owner = owner
+        //         this.#balance = balance
+        //     }
+        // }
 
-        get balance(){
-            return this.#balance
-        }
-        balance(newBalance){
-            if (newBalance<0) {
-                
-            } else {
-                
-            }
-            
-        }
+        // get balance(){
+        //     return this.#balance
+        // }
+        // balance(newBalance){
+        //     if (newBalance<0) {
+
+        //     } else {
+
+        //     }
+
+        // }
+
+
+        // Synchronous JavaScript
+        // console.log('a');
+        // console.log('b');
+        // console.log('c');
+        // console.log('d');
+        // console.log('e');
+
+
+
+
+        // Asynchronous JavaScript
+        //         console.log('a');
+        //         console.log('b');
+
+        //         // SET TIME OUT IS ASINCRNUS CODE HAI HAIA HAIAJH HAI
+        //         setTimeout(() => {
+        //             console.log(' settimout is Asynchronous JavaScript')
+
+        //         },0);
+        //         alert('c')
+        //         console.log('d');
+        //         console.log('e');
+
+
+
+        // // callbackk and queuw understand
+        // function callback(){
+        //     console.log('callback function executed');
+        // }
+
+        // console.log(1);
+        // setTimeout(callback,3000)
+        // console.log(2);
+
+
+
+        // function callback2() {
+        //     console.log(1.1);
+        // }
+        // function syhello() {
+        //     console.log('hello devi');
+        // }
+
+        // console.log(5);
+        // setTimeout(callback2, 3000)
+        // console.log(6);
+        // setTimeout(syhello, 3000)
+        // alert('wait')
+
+
+
+
+
+// console.log('devi you have reached a resturent');
+//         function callwaiter(callback){
+//             console.log('how can i help you sir');
+//             callback(billing)
+//         }
+
+
+//         function order(billing){
+//             console.log('can i have a one glace of water');
+//             billing()
+//         }
+//         function billing(){
+//             console.log('here is your bill sir');
+//         }
+//         function leftStore(){
+//             console.log('thanks for delicious food');
+//         }
+// callwaiter(order)
+        // setTimeout(callwaiter,5000)
+        // setTimeout(order,10000)
+        // setTimeout(billing,10000)
+        // setTimeout(leftStore,10000)
+
+
+
+    //     CallBack Hell function == nested function
+
+    // console.log('devi you have reached a resturent');
+    //     function callwaiter1(){
+    //         console.log('how can i help you sir');
+
+    //         function order1(){
+    //         console.log('can i have a one glace of water');
+
+    //         function billing1(){
+    //         console.log('here is your bill sir');
+    //         function leftStore1(){
+    //         console.log('thanks for delicious food');
+    //     }
+    //     leftStore1()
+    //     }
+    //     billing1()
+    //     }
+    //     order1()
+    //     }
+    //     callwaiter1()
+// 13/03/2024
+// Function run according to time this is wrong so we solve to user call fuction 
+
+    //     function step1() {
+    //         setTimeout(() => {
+    //             console.log(step1);
+    //         },100);
+    //     }
+    //     function step2() {
+    //         setTimeout(() => {
+    //             console.log(step2);
+    //         },200);
+    //     }
+    //     function step3() {
+    //         setTimeout(() => {
+    //             console.log(step3);
+    //         },30);
+    //     }
+    //     function step4() {
+    //         setTimeout(() => {
+    //             console.log(step4);
+    //         },400);
+    //     }
+    //     function step5() {
+    //         setTimeout(() => {
+    //             console.log(step5);
+    //         },500);
+    //     }
+    //    step1()
+    //    step2()
+    //    step3()
+    //    step4()
+    //    step5()
+
+
+        // function step1(callback) {
+        //     setTimeout(() => {
+        //         console.log(step1);
+        //         callback()
+        //     },100);
+        // }
+        // function step2(callback) {
+        //     setTimeout(() => {
+        //         console.log(step2);
+        //         callback()
+        //     },200);
+        // }
+        // function step3(callback) {
+        //     setTimeout(() => {
+        //         console.log(step3);
+        //         callback()
+        //     },30);
+        // }
+        // function step4(callback) {
+        //     setTimeout(() => {
+        //         console.log(step4);
+        //         callback()
+        // }
+       
+        // step1(()=>{
+        //     step2(()=>{
+        //         step3(()=>{
+        //             step4(()=>{
+        //                 console.log('done');
+        //             })
+        //         })
+        //     })
+        // })
+    //    step1(step2)
+    //    step2()
+    //    step3()
+    //    step4()
+    //    step5()
+    // step1() then step2() then step3 then
+
+       let promise = new Promise((resolve ,reject)=>{
+        setTimeout(() => {
+            resolve(true)
+        },500)
+       })
+       console.log(promise);
+       let promise1 = new Promise((resolve ,reject)=>{
+        setTimeout(() => {
+            resolve('i am rejected')
+        },500)
+       })
+       console.log(promise1);
+     
+        
     </script>
 
+</body >
 
-</body>
-
-</html>
+</html >
